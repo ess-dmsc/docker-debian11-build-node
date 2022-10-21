@@ -39,11 +39,6 @@ RUN git clone http://github.com/ess-dmsc/conan-configuration.git && \
 
 COPY files/default_profile $CONAN_USER_HOME/.conan/profiles/default
 
-RUN git clone https://github.com/ess-dmsc/build-utils.git && \
-    cd build-utils && \
-    git checkout c05ed046dd273a2b9090d41048d62b7d1ea6cdf3 && \
-    make install
-
 RUN adduser jenkins
 
 RUN chown -R jenkins $CONAN_USER_HOME/.conan
