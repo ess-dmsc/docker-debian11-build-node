@@ -2,12 +2,41 @@ FROM debian:bullseye
 
 RUN apt-get update && \
     apt-get upgrade -y && \
-    apt-get install -y bzip2 clang-format clang-tidy \
-        cloc cmake curl doxygen gcc git graphviz g++ flex lcov make ninja-build \
-        mpich valgrind autoconf automake libtool perl build-essential \
-        libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev \
-        libncurses5-dev libncursesw5-dev xz-utils libffi-dev liblzma-dev \
-        python3-pip && \
+    apt-get install -y \
+        autoconf \
+        automake \
+        build-essential \
+        bzip2 \
+        clang-format \
+        clang-tidy \
+        cloc \
+        cmake \
+        curl \
+        doxygen \
+        flex \
+        g++ \
+        gcc \
+        git \
+        graphviz \
+        lcov \
+        libbz2-dev \
+        libffi-dev \
+        liblzma-dev \
+        libncurses5-dev \
+        libncursesw5-dev \
+        libreadline-dev \
+        libsqlite3-dev \
+        libssl-dev \
+        libtool \
+        make \
+        mpich \
+        ninja-build \
+        perl \
+        python3-pip \
+        valgrind \
+        xz-utils \
+        zlib1g-dev \
+        && \
     apt-get autoremove -y && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
