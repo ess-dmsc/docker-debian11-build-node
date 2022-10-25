@@ -25,6 +25,7 @@ RUN apt-get update && \
         libncurses5-dev \
         libncursesw5-dev \
         libreadline-dev \
+        libsasl2-dev \
         libsqlite3-dev \
         libssl-dev \
         libtool \
